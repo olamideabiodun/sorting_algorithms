@@ -5,7 +5,7 @@
  * @h: a pointer to the head of the list
  * @n1: first node to swap
  * @n2: second node to swap
-*/
+ **/
 void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2)
 {
 	(*n1)->next = n2->next;
@@ -24,7 +24,7 @@ void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2)
 /**
  * insertion_sort_list - sorts doubly linked list with insertion sort
  * @list: list to sort
-*/
+**/
 void insertion_sort_list(listint_t **list)
 {
     listint_t *current, *run, *tmp;
