@@ -3,7 +3,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+/**
+ * enum bool - boolean operator
+ * @false: false
+ * @true: true
+ */
 typedef enum bool
 {
     false = 0,
