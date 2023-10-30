@@ -17,20 +17,6 @@ void swap_elements(int *a, int *b)
  * @size: The size of the array
 */
 
-bool isSorted(int *arr, size_t size) {
-    bool isSorted = true;
-    size_t i;
-
-    for (i=0;i<size-1;i++) {
-        if (arr[i] > arr[i + 1]) {
-            isSorted = false;
-            break;
-        }
-    }
-
-    return isSorted;
-}
-
 void selection_sort(int *array, size_t size)
 {
     int *min;
@@ -44,7 +30,6 @@ void selection_sort(int *array, size_t size)
 		min = array + i;
 		for (j = i + 1; j < size; j++)
 			min = (array[j] < *min) ? (array + j) : min;
-
 		if ((array + i) != min)
 		{
 			swap_elements(array + i, min);
