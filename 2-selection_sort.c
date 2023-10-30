@@ -33,7 +33,26 @@ bool isSorted(int *arr, size_t size) {
 
 void selection_sort(int *array, size_t size)
 {
-    size_t i, j;
+    int *min;
+	size_t i, j;
+
+	if (array == NULL || size < 2)
+		return;
+
+	for (i = 0; i < size - 1; i++)
+	{
+		min = array + i;
+		for (j = i + 1; j < size; j++)
+			min = (array[j] < *min) ? (array + j) : min;
+
+		if ((array + i) != min)
+		{
+			swap_elements(array + i, min);
+			print_array(array, size);
+		}
+	}
+}
+/** size_t i, j;
     int current_min;
     int *index;
 
@@ -63,7 +82,6 @@ void selection_sort(int *array, size_t size)
 }
 
 
-/**
  * loop through to get the next minimum and 
  * add to the end of the sorted array
  * array[i + 1] = is the next integer
