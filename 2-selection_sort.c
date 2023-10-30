@@ -34,21 +34,14 @@ bool isSorted(int *arr, size_t size) {
 void selection_sort(int *array, size_t size)
 {
     size_t i;
-
     if (!array || size < 2) return;
 
-    while(!isSorted(array, size)) {
-        for  (i = 0; i < size - 1; i++)
+    for  (i = 0; i < size - 1; i++){
+        if (array[i + 1] < array[i])
         {
-            int current_element = array[i];
-            int next_element = array[i + 1];
-            if(next_element) {
-                if (next_element < current_element) {
-                    swap_elements(&array[i], &array[i + 1]);
-                    print_array(array, size);
-                }
-        }
+            swap_elements(&array[i], &array[i + 1]);
+            print_array(array, size);
+            i = -1;
         }
     }
-
 }
