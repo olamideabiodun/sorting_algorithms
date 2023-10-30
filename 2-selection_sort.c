@@ -63,7 +63,9 @@ void selection_sort(int *array, size_t size)
 }
 
 
-//loop through to get the next minimum and 
-//add to the end of the sorted array
-//array[i + 1] = is the next integer
-//array[1] = the current;
+/**
+ * loop through to get the next minimum and 
+ * add to the end of the sorted array
+ * array[i + 1] = is the next integer
+ * array[1] = the current;
+ */
