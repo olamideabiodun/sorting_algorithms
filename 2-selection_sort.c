@@ -38,10 +38,7 @@ void selection_sort(int *array, size_t size)
     int *index;
 
 
-
-    if (!array || size < 2)
-        return;
-
+    if (!array || size < 2) return;
     current_min = array[0];
 
     for  (i = 0; i < size - 1; i++)
@@ -52,11 +49,14 @@ void selection_sort(int *array, size_t size)
             {
                 current_min = array[j];
                 index = &array[j];
+
             }
         }
 
+        if (array[i] != current_min) {
+            swap_elements(index, &array[i]);
+        }
 
-        swap_elements(index, &array[i]);
         current_min = array[i + 1];
         print_array(array, size);
     }
